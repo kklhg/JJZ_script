@@ -1,4 +1,4 @@
-//获取B2单元格的值,判断是否大于等于今天，如果大于等于今天，则在D2单元格输出大于等于。
+//进京证提醒
 const sheet = ActiveSheet
 // 获取B2单元格
 const cellB2 = sheet.Range("B2")
