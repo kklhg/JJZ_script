@@ -1,30 +1,33 @@
-//获取B2单元格的值，是否大于等于今天，如果大于等于今天，则在D2单元格输出大于等于今天。
+//获取B2单元格的值,判断是否大于等于今天，如果大于等于今天，则在D2单元格输出大于等于。
 const sheet = ActiveSheet
 // 获取B2单元格
-const cellB2 = sheet.Range(“B2”)
-//获取D2单元格
-const cellC2 = sheet.Range(“C2”)
+const cellB2 = sheet.Range("B2")
+// 获取D2单元格
+const cellC2 = sheet.Range("C2")
 // 获取当前日期
-const 今天 = new Date()
+const today = new Date()
 
-// 判断B2单元格是否大于等于今天
-如果（cellB2.Value2 >= 今天）{
-  // 如果大于等于今天，则在C2季度输出到期
-  cellC2.Value2 = "印度"
-  // 推送加推送到微信公众号，XXXXX修改为您自己的token
+// 判断B2单元格的值是否大于等于今天
+if (cellB2.Value2 >= today) {
+  // 如果大于等于今天，则在C2单元格输出到期
+  cellC2.Value2 = "到期"
+  // 推送加推送到微信公众号,xxxxx修改您自己的token
   const resp = HTTP.fetch('http://www.pushplus.plus/send?token=xxxxx&title=进京证提醒&content=进京证已到期&template=html', {
-  方法：'GET'，
-  超时：2000，
-}）
+  method: 'GET',
+  timeout: 2000,
+})
 
-} 别的 {
+} else {
   // 如果小于今天，则在C2单元格输出未到期
   cellC2.Value2 = "未到期"
-  // 推送加推送到微信公众号，XXXXX修改为您自己的token
+  // 推送加推送到微信公众号,xxxxx修改您自己的token
   const resp = HTTP.fetch('http://www.pushplus.plus/send?token=xxxxx&title=进京证提醒&content=进京证未到期&template=html', {
-  方法：'GET'，
-  超时：2000，
-}）
+  method: 'GET',
+  timeout: 2000,
+})
 }
+
+
+
 
 
