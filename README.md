@@ -11,3 +11,5 @@ WPS云文档脚本自动推送到微信公众号
 
 
 Token获取传送门：http://www.pushplus.plus
+【金山文档｜模板】 进京证提醒 
+ https://pub.kdocs.cn/t/t19IzAaA40YMKMC
