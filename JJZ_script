@@ -28,6 +28,12 @@ if (cellB2.Value2 >= today) {
 }
 
 
+// 备用通道，xxxxx修改您自己的token
+//  const resp = HTTP.put('http://www.pushplus.plus/send', {
+//  token:'xxxxx',
+//  title:'cellC2',
+//  content:"cellC2",
+//  })
 
 
 
